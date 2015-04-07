@@ -7,3 +7,6 @@
 # Which of the following is the fastest way to calculate the average value of the variable
 # pwgtp15 
 # broken down by sex using the data.table package?
+
+DT <- fread("getdata-data-ss06pid.csv")
+print(sapply(split(DT$pwgtp15,DT$SEX),mean))
